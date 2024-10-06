@@ -1,5 +1,6 @@
 import Counter from "./Counter"
 import { decrement, increment } from "./Features/Counters/CountersSlice"
+import Posts from "./Posts"
 import Stats from "./Stats"
 import { useDispatch, useSelector } from "react-redux"
 
@@ -25,6 +26,7 @@ const totalCount = counters.reduce((sum, current)=> sum + current.value,0)
         counters.map((counter) =>(<Counter count={counter.value} key={counter.id} handleIncrement={()=>handleIncrement(counter.id)} handleDecrement={()=>handleDecrement(counter.id)}></Counter>))
        }
         <Stats count={totalCount}></Stats>
+        <Posts></Posts>
       </div>
      </div>
     </>
