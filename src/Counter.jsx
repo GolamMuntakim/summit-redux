@@ -1,16 +1,16 @@
-import { useState } from "react";
+
 import Stats from "./Stats";
 import Button from "./Button";
 
 
-const Counter = () => {
-    const [count, setCount] = useState(0);
-    const handleIncrement = () =>{
-        setCount((prevCount) =>prevCount + 1)
-    } 
-    const handleDecrement = () =>{
-        setCount((prevCount) => prevCount - 1)
-    }
+const Counter = ({count, handleDecrement, handleIncrement}) => {
+    // const [count, setCount] = useState(0);
+    // const handleIncrement = () =>{
+    //     setCount((prevCount) =>prevCount + 1)
+    // } 
+    // const handleDecrement = () =>{
+    //     setCount((prevCount) => prevCount - 1)
+    // }
     return (
         <div className=" bg-slate-100 p-10 drop-shadow-md">
             <Stats count={count}></Stats>
